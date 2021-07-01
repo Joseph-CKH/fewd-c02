@@ -17,17 +17,17 @@
       <!--Add your form below:-->
       <form action="story.html" method="GET">
         <label for="animal-1" value="animal-1">Animal:</label>
-        <input id="animal-1" type="text" name="animal-1">
+        <input id="animal-1" type="text" name="animal-1" value="Animal">
         <br><label for="animal-2" value="animal-2">Another Animal:</label>
-        <input id="animal-2" name="animal-2" type="text" required><br>
+        <input id="animal-2" name="animal-2" type="text" value="Another Animal" required><br>
         <label for="animal-3" value="animal-2">One More Animal:</label>
-        <input id="animal-3" name="animal-3" type="text" required>
+        <input id="animal-3" name="animal-3" type="text" value="One More Animal" required>
         <label for="adj-1">Adjective (past tense):</label>
-        <input id="adj-1" name="adj-1" type="text" required>
+        <input id="adj-1" name="adj-1" type="text" value="Adjective (past tense)" required>
         <label for="berb-1">Verb (ends in -ing):</label>
-        <input id="verb-1" name="verb-1" type="text" required>
+        <input id="verb-1" name="verb-1" type="text" value="Verb (ends in -ing)" required>
         <label for="num-1">Number</label>
-        <input id="num-1" name="num-1" type="number" required>
+        <input id="num-1" name="num-1" type="num-1" value="Number" required>
         <br><span required>Yes or No:</span>
         <input id="yes" type="radio" name="answer" value="yes" required>
         <label for="yes">yes</label>
@@ -36,13 +36,16 @@
         <br><label for="speed">Relative speed (ends in -er):</label>
         <select id="speed" name="speed" required>
         <option value="faster">Faster</option></select>
-        <datalist id="quote-choices">
-          <br><label for="quote">Motivational Quote:</label>
-          <input id="quote" name="quote" type="text" required list="quote-choices">
-          </datalist><br>
-        <option value="winner gets ice cream!"></option>
+          <label for="quote">Motivational Quote:</label>
+          
+          <input id="quote" name="quote" type="text" list="quote-choices" required>
+          <datalist id="quote-choices">
+            <option value="winner gets ice cream!"></option>
+            <option value="ma ma ni ya"></option>
+            <option value="all in one ice cream!"></option>
+          </datalist>
         <label for="message">Meaningful Message:</label>
-        <textarea id="message" name="message" required row="8" col="40"></textarea><br>
+        <textarea id="message" name="message" rows="8" cols="40" ></textarea><br>
         <input type="submit" value="Form My Story!">
 
       </form>
