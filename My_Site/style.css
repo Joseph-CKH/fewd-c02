@@ -1,7 +1,42 @@
-.bg_color {
-  background: rgb(30, 3, 82);
+/**蒙层*/
+
+.left_slide_center_nav .center_mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    z-index: 1000;
+    display: none;
 }
 
-.navbar-brand {
-  background-color: rgb(252, 88, 216);
+
+/**内容*/
+
+.left_slide_center_nav .center_content {
+    position: fixed;
+    width: 79%;
+    top: 0;
+    bottom: 0;
+    transition: all .4s;
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -os-transition: all .4s;
+    z-index: 99999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+    background: #fff;
+    -os-transform: translateX(-120%);
+    transform: translateX(-120%);
+}
+
+.left_slide_center_nav.show .center_mask {
+    display: block;
+}
+
+.left_slide_center_nav.show .center_content {
+    -os-transform: translateX(0);
+    transform: translateX(0);
 }
