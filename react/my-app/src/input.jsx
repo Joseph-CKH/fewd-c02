@@ -1,32 +1,31 @@
 import React from "react";
+import { useState } from "react";
 
-export class input extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-    };
-  }
+function Input({ handleChangeName, text }) {
+  const [name, steName] = useState();
 
-  render() {
-    return (
-      <div>
-        <input
-          type="text"
-          value={this.state.name}
-          onChange={(event) => {
-            this.setState({ name: event.target.value });
-          }}
-        ></input>
-        <button
-          type="button"
-          onClick={() => this.props.handleChangeName(this.state.name)}
-        >
-          click
-        </button>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <label htmlFor="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        value={name}
+        placeholder={text}
+        onChange={(event) => {
+          steName(event.target.value);
+        }}
+      />
+      <button
+        type="button"
+        onClick={() => {
+          handleChangeName(name);
+        }}
+      >
+        Click
+      </button>
+    </div>
+  );
 }
 
-export default input;
+export default Input;
