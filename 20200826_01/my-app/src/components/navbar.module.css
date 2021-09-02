@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.changeList {
+    width: 20px;
+    height: 20px;
+    margin: 0px 4px;
+    background-color: honeydew;
+    border: 1px solid black;
+}
+
+.navbar {
+    width: 100px;
+    min-height: 100vh;
+    background-color: rgb(255, 235, 170);
+}
+
+.navbar>button {
+    width: 50px;
+    padding: 5px;
+    margin: 3px 0;
+    background-color: honeydew;
+}
+
+.pageList {
+    width: 100px;
+    min-height: 100vh;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    transition: all 1s;
+    left: 0;
+}
+
+.noshow {
+    left: -100px;
+}
+
+@media screen and (min-width: 760px) {}
